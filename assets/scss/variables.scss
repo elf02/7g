@@ -1,0 +1,46 @@
+$default-fluid-min-bp: 400px;
+$default-fluid-max-bp: 1440px;
+
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
+$bp-xxl: 1400px;
+
+:root {
+    --ff-base: "JetBrains Mono", monospace;
+
+    --fw-regular: 400;
+    --fw-bold: 800;
+
+    --lh-small: 1.25;
+    --lh-medium: 1.5;
+    --lh-large: 1.75;
+
+    --fs-small: .8rem;
+    --fs-x-small: 1rem;
+    --fs-medium: 1.125rem;
+    --fs-large: #{fluid(1.125rem, 1.25rem)};
+    --fs-x-large: #{fluid(1.3rem, 2rem)};
+    --fs-xx-large: #{fluid(2rem, 2.7rem)};
+
+    --color-base: #ffffff;
+    --color-neutral: #f5f5f5;
+    --color-contrast: #383838;
+    --color-primary: #f59e0b;
+    --color-secondary: #ef4444;
+
+    --transition-duration: .4s;
+    --transition-timing: ease-out;
+    --transition: all var(--transition-duration) var(--transition-timing);
+    --transition-mobile-menu: translate var(--transition-duration) var(--transition-timing), visibility var(--transition-duration);
+
+    --content-max-width: 700px;
+    --content-max-width-wide: 900px;
+
+    --block-component-spacing: #{fluid(1rem, 3rem)};
+    --headline-spacing: #{fluid(0.4rem, 1.4rem)};
+    --flow-spacing: calc(var(--block-component-spacing) / 2);
+    --padding-inline: 1rem;
+    --gap: #{fluid(1rem, 2rem)};
+}

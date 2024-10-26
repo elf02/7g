@@ -1,0 +1,19 @@
+{
+    "name": "acf/image-slider",
+    "title": "Image Slider",
+    "description": "Simple Image Slider",
+    "icon": "slides",
+    "category": "7g",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "template.php"
+    },
+    "supports": {
+        "mode": false,
+        "anchor": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

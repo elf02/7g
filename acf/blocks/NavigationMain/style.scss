@@ -1,0 +1,30 @@
+block-component[name="NavigationMain"] {
+    --nav-height: 80px;
+    display: none;
+
+    @media screen and (min-width: $bp-md) {
+        display: block;
+    }
+
+    .logo {
+        > svg {
+            height: calc(var(--nav-height) / 1.5);
+        }
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        block-size: var(--nav-height);
+    }
+
+    .navigation-main {
+        ul {
+            display: flex;
+            gap: var(--padding-inline);
+            padding: 0;
+            list-style: none;
+        }
+    }
+}

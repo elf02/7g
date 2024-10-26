@@ -1,0 +1,29 @@
+@use 'sass:math';
+
+$default-fluid-min-bp: 400px !default;
+$default-fluid-max-bp: 1440px !default;
+
+@function round($number, $decimals: 0) {
+    $n: 1;
+    @if $decimals > 0 {
+        @for $i from 1 through $decimals {
+            $n: $n * 10;
+        }
+    }
+    @return math.div(math.round($number * $n), $n);
+}
+
+@function px_to_rem($px) {
+    $rems: math.div($px, 16px) * 1rem;
+    @return $rems;
+}
+
+@function fluid($min-size, $max-size, $min-breakpoint: $default-fluid-min-bp, $max-breakpoint: $default-fluid-max-bp, $unit: vw) {
+    $min-breakpoint: px_to_rem($min-breakpoint);
+    $max-breakpoint: px_to_rem($max-breakpoint);
+    $slope: math.div($max-size - $min-size, $max-breakpoint - $min-breakpoint);
+    $slope-to-unit: round($slope * 100, 3);
+    $intercept: round($min-size - $slope * $min-breakpoint, 3);
+
+    @return clamp(#{$min-size}, #{$slope-to-unit}#{$unit} + #{$intercept}, #{$max-size});
+}

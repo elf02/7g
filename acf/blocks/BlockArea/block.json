@@ -1,0 +1,19 @@
+{
+    "name": "acf/block-area",
+    "title": "Block Area",
+    "description": "Show Block Area",
+    "icon": "layout",
+    "category": "7g",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "template.php"
+    },
+    "supports": {
+        "mode": false,
+        "anchor": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

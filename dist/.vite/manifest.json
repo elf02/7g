@@ -1,0 +1,52 @@
+{
+  "acf/blocks/ImageSlider/script.js": {
+    "file": "assets/script-D9OjBACt.js",
+    "name": "script",
+    "src": "acf/blocks/ImageSlider/script.js",
+    "isDynamicEntry": true,
+    "css": [
+      "assets/script-11XZ8RAG.css"
+    ]
+  },
+  "acf/blocks/ImageText/script.js": {
+    "file": "assets/script-BVddx3FV.js",
+    "name": "script",
+    "src": "acf/blocks/ImageText/script.js",
+    "isDynamicEntry": true
+  },
+  "acf/blocks/NavigationMobile/script.js": {
+    "file": "assets/script-BwqvdNIQ.js",
+    "name": "script",
+    "src": "acf/blocks/NavigationMobile/script.js",
+    "isDynamicEntry": true
+  },
+  "assets/editor.scss": {
+    "file": "assets/editor-CSeJMk-W.css",
+    "src": "assets/editor.scss",
+    "isEntry": true
+  },
+  "assets/fonts/jetbrains-mono-v18-latin-800.woff2": {
+    "file": "assets/jetbrains-mono-v18-latin-800-DeKpJCVq.woff2",
+    "src": "assets/fonts/jetbrains-mono-v18-latin-800.woff2"
+  },
+  "assets/fonts/jetbrains-mono-v18-latin-regular.woff2": {
+    "file": "assets/jetbrains-mono-v18-latin-regular-BrRFx4uz.woff2",
+    "src": "assets/fonts/jetbrains-mono-v18-latin-regular.woff2"
+  },
+  "assets/main.js": {
+    "file": "assets/main-DhGwcjBN.js",
+    "name": "main",
+    "src": "assets/main.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "acf/blocks/ImageSlider/script.js",
+      "acf/blocks/ImageText/script.js",
+      "acf/blocks/NavigationMobile/script.js"
+    ]
+  },
+  "assets/main.scss": {
+    "file": "assets/main-BzRcHBYT.css",
+    "src": "assets/main.scss",
+    "isEntry": true
+  }
+}

@@ -1,0 +1,148 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--ff-base);
+    font-size: var(--fs-medium);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-medium);
+    color: var(--color-contrast);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-medium);
+
+    + * {
+        margin-block-start: var(--headline-spacing);
+    }
+}
+
+h1 {
+    font-size: var(--fs-xx-large);
+}
+
+h2 {
+    font-size: var(--fs-x-large);
+}
+
+h3 {
+    font-size: var(--fs-large);
+}
+
+h4 {
+    font-size: var(--fs-medium);
+}
+
+h5 {
+    font-size: var(--fs-x-small);
+}
+
+h6 {
+    font-size: var(--fs-small);
+}
+
+p, li {
+    text-wrap: pretty;
+    max-width: 65ch;
+}
+
+a {
+    color: var(--color-primary);
+    text-underline-offset: 0.25ex;
+    transition: var(--transition);
+    transition-property: color;
+
+    &:hover, &:focus-visible {
+        color: var(--color-secondary);
+    }
+}
+
+.button:not(.acf-button) {
+    display: inline-flex;
+    font-size: var(--fs-small);
+    line-height: var(--lh-medium);
+    text-transform: uppercase;
+    appearance: none;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: var(--color-base);
+    border: 1.6px solid var(--color-contrast);
+    padding-block: .3rem;
+    padding-inline: 1rem;
+    letter-spacing: .05ch;
+    transition: var(--transition);
+    transition-property: color, background-color;
+
+    &:hover, &:focus-visible {
+        background-color: var(--color-secondary);
+        color: var(--color-base);
+    }
+}
+
+block-component {
+    display: block;
+
+    #main-content.content-grid > & {
+        margin-block: var(--block-component-spacing);
+    }
+}
+
+.content-grid {
+    --wide-size: calc((var(--content-max-width-wide) - var(--content-max-width)) / 2);
+    --padding-inline: 1rem;
+
+    display: grid;
+    grid-template-columns:
+        [full-start] minmax(var(--padding-inline), 1fr)
+        [wide-start] minmax(0, var(--wide-size))
+        [content-start] min(
+            100% - (var(--padding-inline) * 2),
+            var(--content-max-width)
+        )
+        [content-end]
+        minmax(0, var(--wide-size)) [wide-end]
+        minmax(var(--padding-inline), 1fr) [full-end];
+
+    > :not(.alignwide, .alignfull),
+    .alignfull > :not(.alignwide, .alignfull) {
+        grid-column: content;
+    }
+
+    > .alignwide,
+    .alignfull > .alignwide {
+        grid-column: wide;
+    }
+
+    > .alignfull {
+        grid-column: full;
+        display: grid;
+        grid-template-columns: inherit;
+
+        > .alignfull {
+            grid-column: full;
+        }
+    }
+}
+
+.flow > * + * {
+    margin-block-start: var(--flow-spacing);
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+:focus-visible {
+    outline: dotted 2px Highlight;
+    outline: dotted 2px -webkit-focus-ring-color;
+}

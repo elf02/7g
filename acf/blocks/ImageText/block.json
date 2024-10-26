@@ -1,0 +1,19 @@
+{
+    "name": "acf/image-text",
+    "title": "Image/Text",
+    "description": "Image/Text Block",
+    "icon": "align-pull-left",
+    "category": "7g",
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "template.php"
+    },
+    "supports": {
+        "mode": false,
+        "anchor": true,
+        "align": [
+            "wide",
+            "full"
+        ]
+    }
+}

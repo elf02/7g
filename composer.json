@@ -1,0 +1,23 @@
+{
+    "name": "elf02/7g",
+    "authors": [
+        {
+            "name": "elf02",
+            "email": "chris@elf02.de",
+            "homepage": "https://elf02.de"
+        }
+    ],
+    "require": {
+        "symfony/var-dumper": "^7.1",
+        "vinkla/extended-acf": "^14.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "SG\\": "src/"
+        },
+        "files": [
+            "inc/helpers.php",
+            "inc/cleaner.php"
+        ]
+    }
+}

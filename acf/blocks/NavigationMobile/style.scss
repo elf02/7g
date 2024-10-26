@@ -1,0 +1,75 @@
+block-component[name="NavigationMobile"] {
+    --nav-height: 68px;
+
+    @media screen and (min-width: $bp-md) {
+        display: none;
+    }
+
+    .logo {
+        > svg {
+            height: calc(var(--nav-height) / 1.5);
+        }
+    }
+
+    .navigation-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        block-size: var(--nav-height);
+    }
+
+    .button[data-ref="mobileToggle"] {
+        background-color: var(--color-base);
+        color: var(--color-contrast);
+        border: none;
+        padding-inline: 0;
+
+        > svg {
+            width: 30px;
+        }
+
+        .icon-close {
+            display: none;
+        }
+
+        &[aria-expanded="true"] {
+            .icon-burger {
+                display: none;
+            }
+
+            .icon-close {
+                display: inline;
+            }
+        }
+    }
+
+    .navigation-main-mobile {
+        position: fixed;
+        z-index: 10;
+        block-size: calc(100% - var(--nav-height));
+        inset-inline: 0;
+        inset-block-start: var(--nav-height);
+        padding-inline: var(--padding-inline);
+        overflow-y: auto;
+        backface-visibility: hidden;
+        translate: 100% 0;
+        visibility: hidden;
+        background-color: var(--color-base);
+        transition: var(--transition-mobile-menu);
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: calc(var(--padding-inline) / 2);
+            padding: 0;
+            list-style: none;
+        }
+    }
+
+    .button[data-ref="mobileToggle"][aria-expanded="true"] + .navigation-main-mobile  {
+        translate: 0 0;
+        //opacity: 1;
+        visibility: visible;
+    }
+}

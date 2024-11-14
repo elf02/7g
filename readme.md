@@ -5,7 +5,6 @@ A lightweight hybrid WordPress starter theme.
 - ACF block components (custom HTML-Element)
 - JS Islands. Load js only if needed. (visible, on load, media query...)
 - Hook PHP attribute for simple add_filter assignment
-- Grid layout
 - ACF fields registered in PHP -> [Extend ACF](https://github.com/vinkla/extended-acf)
 - Vite + Composer
 - Dynamic resize of images

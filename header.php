@@ -11,8 +11,8 @@
 
 <body <?php body_class(); ?>>
     <a href="#main-content" class="visually-hidden">Skip to main content</a>
-    <header class="content-grid">
+    <header class="container">
         <?php \SG\get_block_template('NavigationMain'); ?>
         <?php \SG\get_block_template('NavigationMobile'); ?>
     </header>
-    <main class="content-grid" id="main-content">
+    <main class="container" id="main-content">
